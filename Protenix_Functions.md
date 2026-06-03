@@ -26,7 +26,18 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2 \
 protenix pred \
   -i /data/lmk/protenix_inputs/ubiquitin.json \
-  -o /data/lmk/protenix_outputs/ubiquitin
+  -o /data/lmk/protenix_outputs
+```
+
+> **02 蛋白质结构预测 -- |单任务|远程 MSA|多 seed|**
+
+加 `-s 101,102,103` 指定多个 seed，每个 seed 独立采样并各自输出一个子目录
+```bash
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2 \
+protenix pred \
+  -i /data/lmk/protenix_inputs/ubiquitin.json \
+  -o /data/lmk/protenix_outputs \
+  -s 101,102,103
 ```
 
 ##### [Protenix 官方仓库](https://github.com/bytedance/Protenix)
