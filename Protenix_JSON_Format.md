@@ -6,11 +6,11 @@
 ```json
 [                                 
   {
-    "name": "Example",             // 任务名，输出子目录以此命名
-    "sequences": [                 // 该复合物包含的所有实体
+    "name": "Example",
+    "sequences": [
       {
         "proteinChain": {          // 实体类型：proteinChain / dnaSequence / rnaSequence / ligand / ion
-          "sequence": "...",       // 氨基酸序列
+          "sequence": "...",
           "count": 1               // 拷贝数，同源 N 聚体写 N
         }
       }
@@ -18,9 +18,6 @@
   }
 ]
 ```
-> seed 由命令行 `-s/--seeds` 指定，不写在 JSON 里（除非 `--use_seeds_in_json`）；无 dialect / version 字段
-
----
 
 > **01 单链蛋白**
 ```json
@@ -39,8 +36,6 @@
 ]
 ```
 
----
-
 > **02 同源多聚体**
 ```json
 [
@@ -57,8 +52,6 @@
   }
 ]
 ```
-
----
 
 > **03 异源多聚体**
 ```json
@@ -82,7 +75,5 @@
   }
 ]
 ```
-
----
 
 ##### [Protenix 官方仓库](https://github.com/bytedance/Protenix)

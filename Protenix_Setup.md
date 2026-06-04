@@ -17,7 +17,7 @@ python -m pip install --upgrade pip setuptools wheel
 python -m pip install --upgrade protenix --index-url https://pypi.org/simple
 # 首次执行 protenix 会用 ninja 即时编译自定义 CUDA 算子，编译结果会缓存，之后启动秒进
 protenix --help
-# 检查已安装的 Protenix 版本
+# 检查 Protenix 版本
 python -m pip show protenix | grep Version
 ```
 

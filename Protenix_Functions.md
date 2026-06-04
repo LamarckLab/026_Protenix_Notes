@@ -22,6 +22,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2
 ---
 
 > **01 蛋白质结构预测 -- |单任务|远程 MSA|默认参数|**
+
 ```bash
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2 \
 protenix pred \
@@ -31,7 +32,6 @@ protenix pred \
 
 > **02 蛋白质结构预测 -- |批量|远程 MSA|默认参数|**
 
-`-i` 指向目录，批量跑目录内所有 json
 ```bash
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2 \
 protenix pred \
