@@ -65,9 +65,31 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2 \
 protenix pred \
   -i /data/lmk/protenix_inputs \
   -o /data/lmk/protenix_outputs \
-  -c 50 \
-  -p 500 \
+  -c 20 \
+  -p 400 \
   -e 10
+```
+
+> **05 蛋白质结构预测 -- |批量|选择模型|自动默认参数|**
+
+`-n` 切换模型；`--use_default_params true` 按所选模型自动套用 cycle/step（mini → 4/5，大模型 → 10/200）
+
+| 模型名                          | 规模 | 备注                        |
+| :------------------------------ | :--- | :-------------------------- |
+| `protenix-v2`                   | 464M | 暂未开放下载（403）         |
+| `protenix_base_default_v1.0.0`  | 368M | 默认，当前可使用的性能最强  |
+| `protenix_base_20250630_v1.0.0` | 368M | 同档，训练集截止 2025-06-30 |
+| `protenix_base_default_v0.5.0`  | 368M | 旧版 base                   |
+| `protenix_mini_default_v0.5.0`  | mini | 快、精度低                  |
+| `protenix_tiny_default_v0.5.0`  | tiny | 最快、精度最低              |
+
+```bash
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=2 \
+protenix pred \
+  -i /data/lmk/protenix_inputs \
+  -o /data/lmk/protenix_outputs \
+  -n protenix_mini_default_v0.5.0 \
+  --use_default_params true
 ```
 
 ##### [Protenix 官方仓库](https://github.com/bytedance/Protenix)
