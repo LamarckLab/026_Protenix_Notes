@@ -6,12 +6,12 @@
   <img src="https://img.shields.io/badge/Tool-Protenix-blue?style=flat-square" />
   <img src="https://img.shields.io/badge/Field-Structure%20Prediction-orange?style=flat-square" />
   <img src="https://img.shields.io/badge/Platform-Linux-555?style=flat-square" />
-  <img src="https://img.shields.io/badge/Status-Complete-yellow?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square" />
 </p>
 
 ---
 
-## 📚 内容索引
+## 内容索引
 
 | 文件 / 文件夹                                        | 说明                                                     |
 | :--------------------------------------------------- | :------------------------------------------------------- |
